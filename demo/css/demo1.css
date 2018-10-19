@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+/**
+* animation有八个属性
+*   1.动画名称 animation-name
+*   2.动画时间 animation-duration
+*   3.动画方式 animation-timing-function
+*   4.动画延迟 animation-delay
+*   5.动画次数 animation-iteration-count
+*   6.动画方向 animation-direction
+*   7.动画状态 animation-play-state
+*   8.动画结束 animation-fill-mode（最后一帧状态forwards,回到首帧状态backwards）
+* 
+**/
+
+.box {
+  height: 100px;
+  width: 100px;
+  border: 1px solid #666;
+  animation-name: woddle;
+  animation-duration: 3s;
+  /* animation-iteration-count: infinite; */
+  animation-timing-function: linear;
+  animation-fill-mode: backwards;
+  margin-left: 100px;
+}
+
+@keyframes woddle {
+  0% {
+    margin-left: 100px;
+    background: green;
+  }
+  40% {
+    margin-left: 150px;
+    background: orange;
+  }
+  60% {
+    margin-left: 75px;
+    background: blue;
+  }
+  100% {
+    margin-left: 100px;
+    background: red;
+  }
+}
